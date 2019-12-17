@@ -10,11 +10,12 @@ import (
 	"fmt"
 	"math/rand"
 	"runtime"
+	"time"
 )
 
 func init() {
-	// rand.Seed(time.Now().UTC().UnixNano())
-	rand.Seed(int64(99))
+	rand.Seed(time.Now().UTC().UnixNano())
+	//rand.Seed(int64(99))
 
 }
 
