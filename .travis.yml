@@ -11,8 +11,8 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - ./cc-test-reporter before-build
-  - gocov test -coverprofile=out 
-  - ./cc-test-reporter format-coverage --input-type gocov out 
+  - go test -coverprofile cover.out 
+  - ./cc-test-reporter format-coverage --input-type gocov cover.out 
   - ./cc-test-reporter upload-coverage
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
