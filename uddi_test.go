@@ -79,7 +79,7 @@ func ExampleCreateCtx() {
 	rand.Seed(int64(99))
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	time.Sleep(time.Second)
+	time.Sleep(2*time.Second)
 	t, err := CreateCtx(ctx)
 	if err != nil {
 		fmt.Println(err)
